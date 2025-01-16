@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title {
+    text-align: center;
+    padding: 25px 0px;
+    color: darkblue;
+}
+.building {
+    border: 1px solid black;
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto; 
+}    
+.elevator {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    div {
+        position: relative;
+        top: calc(100% - 35px);
+        border: 1px solid black;
+        width: 80px;
+        height: 35px;
+        text-align: center;
+        padding: 7px 5px 5px 5px;
+        transition: all 1s;
+    }
+}
+.floor {
+    width: 100%;
+    button {
+        cursor: pointer;
+        padding: 0px 5px;
+    }
+}
+.floor div {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 35px;
+    text-align: center;
+    padding: 3px 5px 5px 5px;
+}
+.elevator1 {
+    /* transform: translateY(-1900%); */
+    position: relative;
+}
+.elevator2 {
+    /* transform: translateY(-800%); */
+    position: relative;
+}
+.elevator3 {
+    /* transform: translateY(-1500%); */
+    position: relative;
+} 
