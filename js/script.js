@@ -33,17 +33,12 @@ floor.addEventListener("click", function (e) {
     currentElevator.push(currentElement);
   });
 
-  const min = currentElevator.reduce(
-    (acc, elem, index) => {
-      if (acc.count > elem) acc = { ind: index, count: elem };
-      return acc;
-    },
-    { ind: 0, count: currentElevator[0] }
+  const min = currentElevator.reduce((acc, elem, index) => 
+      acc.count > elem ? { ind: index, count: elem } : acc,
+        { ind: 0, count: currentElevator[0] } 
   );
-
+    
   arr[min.ind].count = currentFloor;
-
-  console.log(currentFloor);
 
   elevators[min.ind].style.transform = `translateY(-${currentFloor - 1}00%)`;
 });
@@ -56,7 +51,7 @@ const arr3 = ["4", "1:2", "2:2", "2:1", "0:1"];
 
 function gasStation(strArr) {
   const newArr = strArr;
-  const N = +newArr.splice(0, 1);
+  const N = +newArr.shift();
 
   for (let i = 0; i < N; i++) {
     const arr = newArr;
